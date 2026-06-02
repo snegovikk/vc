@@ -18,37 +18,11 @@
             gtag('config', 'UA-162849880-1');
     </script>
 
-    <script>
-        function changeOpacity(value) {
-        link = document.getElementsByClassName('link')
-        for(var i = 0, j = link.length; i < j; i++) { 
-            link[i].style.opacity = value;
-        }
-        }
-
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction() {
-        var button = document.getElementById("floating-button-cases");
-        
-        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-            button.classList.add("show");
-        } else {
-            button.classList.remove("show");
-        }
-        
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
-            button.classList.remove("show");
-        }
-        }
-    </script>
-
 </head>
 
 <body>
 
 <main>
-    <a href="Cases/index.html" id="floating-button-cases">Кейсы →</a>
-
     <section class="project-meta">
         <dl class="project-meta__grid">
 
@@ -77,7 +51,6 @@
             <div class="project-meta__item">
                 <dt>Ссылки</dt>
                 <dd>
-                    <a href="Cases/index.html">кейсы</a><br>
                     <a href="cv.html">резюме</a><br>
                 </dd>
             </div>
