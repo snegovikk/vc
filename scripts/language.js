@@ -6,6 +6,7 @@
   "Currently": "Сейчас",
   "Kinopoisk": "Кинопоиск",
   "Links": "Ссылки",
+  "Contacts": "Контакты",
   "cases": "кейсы",
   "readcv": "резюме",
   "linkedin": "лин",

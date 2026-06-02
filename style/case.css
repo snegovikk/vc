@@ -129,15 +129,17 @@ a:hover {
    ========================= */
 
 .project-meta {
-    width: 96%;
-    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px clamp(16px, 4vw, 48px) 0;
 }
 
 .project-meta__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 0fr;
-    gap: 32px;
-    margin-bottom: 80px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(20px, 2.5vw, 40px);
+    width: 100%;
+    margin: 0 0 80px;
 }
 
 .project-meta__item {
@@ -146,6 +148,7 @@ a:hover {
     column-gap: 16px;
     font-size: 16px;
     line-height: 24px;
+    min-width: 0;
 }
 
 .project-meta dt {
@@ -156,6 +159,8 @@ a:hover {
 .project-meta dd {
     margin: 0;
     color: var(--text);
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .project-meta__item--right {
@@ -257,6 +262,8 @@ a:hover {
 
 .project-meta__item--back {
     grid-template-columns: 1fr;
+    justify-self: start;
+    width: auto;
 }
 
 .project-meta__item--back dd {
@@ -279,6 +286,20 @@ a:hover {
 .wrap.wrap--cases {
     margin-top: 0;
     max-width: 960px;
+}
+
+.cases-notice {
+    margin: 0 auto 32px;
+    max-width: 960px;
+    width: 96%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
 }
 
 #list {
@@ -343,6 +364,14 @@ a:hover {
    Mobile
    ========================= */
 
+@media (max-width: 1100px) {
+    .project-meta__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-bottom: 56px;
+    }
+}
+
    @media (max-width: 640px) {
 
     body {
@@ -365,7 +394,7 @@ a:hover {
     }
 
     .project-meta {
-        width: 92%;
+        padding: 24px 16px 0;
     }
 
     .project-meta__grid {
