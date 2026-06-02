@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Vik Evstifeev | Traffic Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/case.css">
+    <link rel="icon" href="../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162849880-1"></script>
+</head>
+
+<body>
+
+<main>
+
+    <!-- Project meta -->
+    <section class="project-meta">
+        <dl class="project-meta__grid">
+
+            <div class="project-meta__item">
+                <dt>Project</dt>
+                <dd>Traffic Widget<br>YM06</dd>
+            </div>
+
+            <div class="project-meta__item">
+                <dt>Release</dt>
+                <dd>March, 2021</dd>
+            </div>
+
+            <div class="project-meta__item">
+                <dt>Platform</dt>
+                <dd>iOS<br>Android</dd>
+            </div>
+
+        </dl>
+    </section>
+
+    <!-- Content -->
+    <section class="wrap">
+
+        <p>iOS 14 gave users the ability to add widgets to any screen. We decided to support this feature in Yandex Maps, starting with one of the main reasons people use Maps every day — traffic information.</p>
+
+        <img src="../img/traffic_widget/traffic_img_1-min.jpg" alt="">
+
+        <h2>Process</h2>
+
+        <p class="case-text">My first idea was to create a level-based widget without a map. It simplified the way we could show traffic conditions using color coding and travel time to work or home.</p>
+
+        <img src="../img/traffic_widget/traffic_img_2-min.jpg" alt="">
+
+        <p class="case-text">I tried several color options, but many of them felt too aggressive and distracting.</p>
+
+        <p class="case-text">The main issue with this approach was context. The traffic level represented the whole city and didn’t reflect the user’s actual location.</p>
+
+        <p class="case-text">I explored an analogy with the weather widget. However, unlike weather, traffic conditions vary significantly within a city, which made a single level misleading.</p>
+
+        <img src="../img/traffic_widget/traffic_img_4-min.jpg" alt="">
+
+        <p class="case-text">That’s why I decided to show the actual map with a traffic layer. It allows users to understand the real situation around them. The traffic forecast remained useful, and the route button became more prominent.</p>
+
+        <p class="case-text">For small and medium widgets, the map covers roughly a 2 km radius. On larger devices, users see a wider area.</p>
+
+        <img src="../img/traffic_widget/traffic_img_5-min.jpg" alt="">
+
+        <p class="case-text">This approach helps users make quick decisions — whether to go home, go to work, or choose a different route — based on visible congestion nearby.</p>
+
+        <img src="../img/traffic_widget/traffic_img_6-min.jpg" alt="">
+
+        <p class="case-text">The widget uses the same color palette as the main application, with four traffic congestion levels.</p>
+
+        <img src="../img/traffic_widget/traffic_img_7-min.jpg" alt="">
+        <img src="../img/traffic_widget/traffic_img_8-min.jpg" alt="">
+
+        <p class="case-text">The medium widget combines the map and forecast in one interface. Users can see citywide traffic, local congestion, and open routes or directions using the ETA button.</p>
+
+        <img src="../img/traffic_widget/traffic_img_9-min.jpg" alt="">
+
+        <p class="case-text">Weather conditions are also shown, as they can directly affect traffic and decision-making.</p>
+
+        <img src="../img/traffic_widget/traffic_img_10-min.jpg" alt="">
+
+        <p class="case-text">The large widget displays an extended map with a 6-hour traffic forecast.</p>
+
+        <img src="../img/traffic_widget/traffic_img_11-min.jpg" alt="">
+
+        <p class="case-text">Dark mode is supported and follows system settings.</p>
+
+        <img src="../img/traffic_widget/traffic_img_12-min.jpg" alt="">
+
+        <p class="case-text">For small widgets, I used the optical center instead of the geometric center. Placing the location exactly in the center looked visually unbalanced.</p>
+
+        <img src="../img/traffic_widget/traffic_img_13-min.jpg" alt="">
+
+        <p class="case-text">On Android, we support all widget grid sizes and provide settings during widget setup.</p>
+
+        <img src="../img/traffic_widget/traffic_img_14-min.jpg" alt="">
+
+        <p class="case-text">Android users can configure traffic layers, map scale, and update intervals, making the widget flexible for power users.</p>
+
+        <img src="../img/traffic_widget/traffic_img_15-min.jpg" alt="">
+
+        <p class="case-text">Different zoom levels (14, 12, 10) provide control over map scale.</p>
+
+        <img src="../img/traffic_widget/traffic_img_16-min.jpg" alt="">
+
+        <h2>Result</h2>
+
+        <p class="case-text">I designed onboarding screens explaining how to add widgets, especially important for iOS where widgets were a new feature.</p>
+
+        <img src="../img/traffic_widget/traffic_img_17-min.jpg" alt="">
+
+        <p class="case-text">Today, thousands of people use this widget daily on iOS and Android. Knowing that this work helps people make better everyday decisions is the most valuable outcome.</p>
+
+        <img src="../img/traffic_widget/traffic_img_1-min.jpg" class="last-img" alt="">
+
+    </section>
+
+    <!-- Team -->
+    <section class="project-meta">
+        <dl class="project-meta__grid">
+
+            <div class="project-meta__item">
+                <dt>Team</dt>
+                <dd>
+                    Designer — Vik Evstifeev<br>
+                    Product Manager<br>
+                    Developers
+                </dd>
+            </div>
+
+            <div class="project-meta__item">
+                <dt>Type</dt>
+                <dd>Project</dd>
+            </div>
+
+            <div class="project-meta__item">
+                <dt>Used tools</dt>
+                <dd>Figma</dd>
+            </div>
+
+        </dl>
+    </section>
+
+</main>
+
+<footer id="bottom-menu">
+    <a href="https://dribbble.com/snovaon" target="_blank" rel="noopener noreferrer">Dribbble</a>
+    <a href="https://www.behance.net/snovaon1" target="_blank" rel="noopener noreferrer">Behance</a>
+    <a href="https://github.com/snegovikk?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>
+    <a href="https://habr.com/ru/users/Vik_E/articles" target="_blank" rel="noopener noreferrer">Хабр</a>
+    <a href="https://vc.ru/id1439208" target="_blank" rel="noopener noreferrer">VC</a>
+</footer>
+
+    <script src="../scripts/language.js"></script>
+</body>
+</html>
