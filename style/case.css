@@ -8,23 +8,8 @@
     --case-bg: #f0f0f0;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #000000;
-        --text: #f9f9f9;
-        --muted: #aaa;
-        --border: #222222;
-        --case-bg: #1a1a1a;
-    }
-}
-
-/* Dark Mode */
-html.theme-dark {
-    --bg: #000000;
-    --text: #f9f9f9;
-    --muted: #aaa;
-    --border: #222222;
-    --case-bg: #1a1a1a;
+html {
+    color-scheme: light only;
 }
 
 
