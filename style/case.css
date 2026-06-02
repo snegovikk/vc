@@ -5,6 +5,7 @@
     --text: #000000;
     --muted: #aaa;
     --border: #f6f6f6;
+    --case-bg: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
         --text: #f9f9f9;
         --muted: #aaa;
         --border: #222222;
+        --case-bg: #1a1a1a;
     }
 }
 
@@ -22,6 +24,7 @@ html.theme-dark {
     --text: #f9f9f9;
     --muted: #aaa;
     --border: #222222;
+    --case-bg: #1a1a1a;
 }
 
 
@@ -249,6 +252,94 @@ a:hover {
 
 
 /* =========================
+   Cases index
+   ========================= */
+
+.project-meta__item--back {
+    grid-template-columns: 1fr;
+}
+
+.project-meta__item--back dd {
+    margin: 0;
+}
+
+.project-meta__back {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.project-meta__back:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.wrap.wrap--cases {
+    margin-top: 0;
+    max-width: 960px;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 140px;
+}
+
+#list a {
+    margin: 0 20px 20px 0;
+    text-decoration: none;
+}
+
+#list a:hover {
+    color: var(--text);
+}
+
+.case {
+    width: 460px;
+    min-height: 404px;
+    background: var(--case-bg);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.case:hover {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+}
+
+.case img {
+    width: 460px;
+    border-radius: 16px 16px 0 0;
+    margin: 0 0 24px;
+    display: block;
+}
+
+.case p {
+    margin: 8px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: var(--muted);
+}
+
+.case .black-text {
+    color: var(--text);
+}
+
+.section-title {
+    width: 100%;
+    margin: 64px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--muted);
+}
+
+
+/* =========================
    Mobile
    ========================= */
 
@@ -316,5 +407,24 @@ a:hover {
 
     #floating-button-cases {
         bottom: 20px;
+    }
+
+    .case,
+    .case img {
+        width: 100%;
+    }
+
+    .case {
+        min-height: auto;
+        padding-bottom: 24px;
+    }
+
+    .case p {
+        margin: 8px 24px;
+    }
+
+    #list {
+        width: 100%;
+        margin-bottom: 80px;
     }
 }
