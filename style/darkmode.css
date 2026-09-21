@@ -1,10 +1,11 @@
-/* Theme follows the OS/browser setting only (prefers-color-scheme). No manual toggle. */
+/* Colors follow OS theme via html[data-theme] (set in theme.js). */
 
 html {
     color-scheme: light dark;
 }
 
-:root {
+html,
+html[data-theme="light"] {
     --bg: #f9f9f9;
     --text: #000000;
     --muted: #aaa;
@@ -15,8 +16,20 @@ html {
     --overlay-border: rgba(0, 0, 0, 0.08);
 }
 
+html[data-theme="dark"] {
+    --bg: #111111;
+    --text: #f4f4f4;
+    --muted: #888888;
+    --border: #2a2a2a;
+    --case-bg: #1c1c1c;
+    --link-line: rgba(255, 255, 255, 0.4);
+    --overlay-bg: rgba(17, 17, 17, 0.82);
+    --overlay-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Fallback if scripts are blocked */
 @media (prefers-color-scheme: dark) {
-    :root {
+    html:not([data-theme]) {
         --bg: #111111;
         --text: #f4f4f4;
         --muted: #888888;
