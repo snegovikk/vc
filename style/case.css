@@ -90,6 +90,7 @@ p.hero-lead a:hover {
 
 .project-meta a {
     text-decoration: none;
+    font-weight: 400;
 }
 
 .project-meta a:hover {
@@ -138,25 +139,25 @@ p.hero-lead a:hover {
 }
 
 .project-meta__grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     width: 100%;
     margin: 0 0 80px;
-    column-gap: 40px;
-    row-gap: 24px;
+    gap: 56px;
 }
 
 .project-meta__grid--with-back {
-    grid-template-columns: 40px repeat(3, minmax(0, 1fr));
-    column-gap: 40px;
+    gap: 56px;
 }
 
 .project-meta__item {
     display: grid;
-    grid-template-columns: 11ch minmax(0, 1fr);
-    column-gap: 20px;
+    grid-template-columns: auto minmax(0, max-content);
+    column-gap: 16px;
+    flex: 0 0 auto;
     min-width: 0;
+    max-width: 100%;
     font-size: 16px;
     line-height: 24px;
 }
@@ -166,13 +167,23 @@ p.hero-lead a:hover {
     white-space: nowrap;
     margin: 0;
     padding: 0;
+    min-width: 5.75rem;
+}
+
+.project-meta__label-spacer {
+    min-width: 5.75rem;
 }
 
 .project-meta dd {
     margin: 0;
     color: var(--text);
+    font-weight: 400;
     min-width: 0;
     overflow-wrap: anywhere;
+}
+
+.project-meta__item--status dd {
+    color: var(--muted);
 }
 
 .project-meta__item--right {
@@ -405,23 +416,9 @@ p.hero-lead a:hover {
    ========================= */
 
 @media (max-width: 1100px) {
-    .project-meta__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 32px;
-        row-gap: 24px;
-    }
-
+    .project-meta__grid,
     .project-meta__grid--with-back {
-        grid-template-columns: 40px minmax(0, 1fr);
-        column-gap: 32px;
-    }
-
-    .project-meta__grid--with-back .project-meta__item--back {
-        grid-row: span 1;
-    }
-
-    .project-meta__grid--with-back .project-meta__item:nth-child(2) {
-        grid-column: 2;
+        gap: 40px 48px;
     }
 }
 
@@ -452,24 +449,16 @@ p.hero-lead a:hover {
 
     .project-meta__grid,
     .project-meta__grid--with-back {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        flex-direction: column;
+        gap: 24px;
         margin-bottom: 48px;
-    }
-
-    .project-meta__grid--with-back .project-meta__item:nth-child(2) {
-        grid-column: auto;
     }
 
     .project-meta__item {
         width: 100%;
-        grid-template-columns: 11ch minmax(0, 1fr);
+        grid-template-columns: auto minmax(0, 1fr);
         column-gap: 16px;
         row-gap: 4px;
-    }
-
-    .project-meta__placeholder {
-        display: none;
     }
 
     .project-meta dt {
