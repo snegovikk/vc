@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" data-hide-language-switcher>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Vik Evstifeev Cases</title>
+    <title data-i18n="title_cases">Виктор Евстифеев — кейсы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f9f9f9">
-    <script>
-      (function () {
-        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      })();
-    </script>
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/darkmode.css">
     <link rel="stylesheet" href="../style/case.css">
@@ -41,33 +35,30 @@
         <dl class="project-meta__grid">
             <div class="project-meta__item project-meta__item--back">
                 <dd>
-                    <a href="#" class="project-meta__back" id="back-link" aria-label="Назад">←</a>
+                    <a href="../index.html" class="project-meta__back" id="back-link" aria-label="Назад" data-i18n-aria="back">←</a>
                 </dd>
             </div>
 
             <div class="project-meta__item">
-                <dt>Контакты</dt>
+                <dt data-i18n="contacts">Контакты</dt>
                 <dd>
-                    тел. <a href="tel:+79254566390">+7 (925) 456–63–90</a><br>
+                    <span data-i18n="tel_prefix">тел.</span> <a href="tel:+79254566390">+7 (925) 456–63–90</a><br>
                     @: <a href="mailto:vikevstifeev@yandex.ru">vikevstifeev@yandex.ru</a><br>
-                    тг: <a href="https://t.me/EvstifeevVik" target="_blank" rel="noopener noreferrer">t.me/EvstifeevVik</a>
+                    <span data-i18n="tg_prefix">тг:</span> <a href="https://t.me/EvstifeevVik" target="_blank" rel="noopener noreferrer">t.me/EvstifeevVik</a>
                 </dd>
             </div>
 
             <div class="project-meta__item">
-                <dt>Сейчас свободен</dt>
+                <dt data-i18n="currently_at">Сейчас свободен</dt>
             </div>
 
-            <div class="project-meta__item">
-                <dt>Ссылки</dt>
-                <dd>
-                    <a href="../cv.html">резюме</a><br>
-                </dd>
+            <div class="project-meta__item project-meta__item--lang">
+                <dd data-language-switcher-host></dd>
             </div>
         </dl>
     </section>
 
-    <p class="cases-notice">Сейчас ведутся работы по формированию кейсов. Всё будет — но скоро…</p>
+    <p class="cases-notice" data-i18n="cases_notice">Сейчас ведутся работы по формированию кейсов. Всё будет — но скоро…</p>
 
     <section class="wrap wrap--cases">
         <div id="list">
@@ -76,27 +67,27 @@
                 <div class="case">
                     <img src="_" alt="">
                     <p>2023 — 2026</p>
-                    <p class="black-text">HMI электромобиля Атом</p>
+                    <p class="black-text" data-i18n="case_atom_hmi">HMI электромобиля Атом</p>
                 </div>
             </a>
 
-            <p class="section-title">Статьи</p>
+            <p class="section-title" data-i18n="writing">Статьи</p>
 
             <a href="_" target="_blank" rel="noopener noreferrer">
                 <div class="case">
                     <img src="_" alt="">
-                    <p>Март 2026</p>
+                    <p data-i18n="march_2026">Март 2026</p>
                     <p class="black-text">_</p>
                 </div>
             </a>
 
-            <p class="section-title">Выступления</p>
+            <p class="section-title" data-i18n="talks">Выступления</p>
 
             <a href="https://www.youtube.com/watch?v=DIYWn4_BsLM" target="_blank" rel="noopener noreferrer">
                 <div class="case">
                     <img src="../img/case_video_handoff.jpg" alt="">
-                    <p>Декабрь 2025</p>
-                    <p class="black-text">Атом: 1000 и одна ночь дизайна</p>
+                    <p data-i18n="december_2025">Декабрь 2025</p>
+                    <p class="black-text" data-i18n="talk_atom">Атом: 1000 и одна ночь дизайна</p>
                 </div>
             </a>
 
@@ -108,22 +99,12 @@
     <a href="https://dribbble.com/snovaon" target="_blank" rel="noopener noreferrer">Dribbble</a>
     <a href="https://www.behance.net/snovaon1" target="_blank" rel="noopener noreferrer">Behance</a>
     <a href="https://github.com/snegovikk?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>
-    <a href="https://habr.com/ru/users/Vik_E/articles" target="_blank" rel="noopener noreferrer">Хабр</a>
+    <a href="https://habr.com/ru/users/Vik_E/articles" target="_blank" rel="noopener noreferrer" data-i18n="habr">Хабр</a>
     <a href="https://vc.ru/id1439208" target="_blank" rel="noopener noreferrer">VC</a>
 </footer>
 
 <script src="../scripts/language.js"></script>
-<script>
-    document.getElementById('back-link').addEventListener('click', function (event) {
-        event.preventDefault();
-        var ref = document.referrer;
-        if (ref && ref.indexOf(window.location.host) !== -1) {
-            history.back();
-        } else {
-            window.location.href = '../index.html';
-        }
-    });
-</script>
+<script src="../scripts/back.js"></script>
 </body>
 
 </html>
