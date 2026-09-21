@@ -1,5 +1,4 @@
-@import url('fonts.css');
-@import url('darkmode.css');
+/* Fonts and theme: linked from each HTML page (darkmode.css uses prefers-color-scheme). */
 
 /* =========================
    Base
@@ -178,7 +177,7 @@ a:hover {
     opacity: 0;
     padding: 12px 12px 12px 16px;
     pointer-events: none;
-    background-color: rgba(255,255,255,0.8);
+    background-color: var(--overlay-bg);
     position: fixed;
     bottom: 64px;
     left: 50%;
@@ -186,7 +185,7 @@ a:hover {
     font-size: 16px;
     border-radius: 24px;
     backdrop-filter: blur(4px);
-    border: 1px solid white;
+    border: 1px solid var(--overlay-border);
     transition: .2s;
 }
 #floating-button-cases:hover { bottom: 68px; text-decoration: none; }
