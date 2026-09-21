@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f9f9f9">
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="style/darkmode.css">
-    <link rel="stylesheet" href="style/case.css">
+    <link rel="stylesheet" href="style/fonts.css?v=20260921">
+    <link rel="stylesheet" href="style/darkmode.css?v=20260921">
+    <link rel="stylesheet" href="style/case.css?v=20260921">
+    <style>
+      .hero-lead a {
+        font-weight: 300;
+        text-decoration: none;
+      }
+      .hero-lead a:hover {
+        text-decoration: none;
+        opacity: 0.65;
+      }
+      .project-meta__links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+      }
+    </style>
     <script src="scripts/theme.js"></script>
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
@@ -65,7 +82,7 @@
     <!-- Intro & timeline -->
     <section class="wrap">
 
-        <p>
+        <p class="hero-lead">
             <img src="img/.png" alt="" class="brand-icon" aria-hidden="true"><span data-i18n="intro_before_atom">Дизайнер цифровых продуктов. Сейчас работаю над электромобилем в</span>
             <a href="https://atom.auto/" target="_blank" rel="noopener"><span data-i18n="atom">Атом</span><img src="img/atom.svg?v=2" alt="" class="brand-icon" aria-hidden="true"></a>.
             <span data-i18n="intro_mid">Развиваю</span>

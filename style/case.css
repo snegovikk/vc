@@ -66,12 +66,14 @@ a:hover {
     text-decoration-color: var(--text);
 }
 
-.wrap > p a {
-    font-weight: inherit;
+.wrap > p a,
+p.hero-lead a {
+    font-weight: 300;
     text-decoration: none;
 }
 
-.wrap > p a:hover {
+.wrap > p a:hover,
+p.hero-lead a:hover {
     text-decoration: none;
     opacity: 0.65;
 }
