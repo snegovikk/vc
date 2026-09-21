@@ -52,40 +52,17 @@ h2 {
 }
 
 a {
+    text-decoration: none;
     color: var(--text);
+    transition: color 0.2s;
+}
+
+a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--link-line);
-    text-decoration-thickness: 1.5px;
-    text-underline-offset: 0.18em;
-    text-decoration-skip-ink: auto;
-    transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 a:hover {
     color: var(--text);
-    text-decoration-color: var(--text);
-}
-
-.wrap > p a,
-p.hero-lead a {
-    font-weight: 300;
-    text-decoration: none;
-}
-
-.wrap > p a:hover,
-p.hero-lead a:hover {
-    text-decoration: none;
-    opacity: 0.65;
-}
-
-.intro-grid a {
-    font-weight: inherit;
-    text-decoration: none;
-}
-
-.intro-grid a:hover {
-    text-decoration: none;
-    opacity: 0.65;
 }
 
 /* =========================
@@ -185,7 +162,6 @@ p.hero-lead a:hover {
     color: var(--muted);
     letter-spacing: -0.02em;
     padding: 8px;
-    text-decoration: none;
     transition: color 0.2s, opacity 0.2s;
 }
 
@@ -229,7 +205,7 @@ p.hero-lead a:hover {
 
 .intro-grid p {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 24px;
     margin: 0;
 }
@@ -278,11 +254,6 @@ p.hero-lead a:hover {
 .project-meta__back:hover {
     opacity: 0.6;
     text-decoration: none;
-}
-
-.timeline-cv {
-    display: inline-block;
-    font-weight: inherit;
 }
 
 .wrap.wrap--cases {
