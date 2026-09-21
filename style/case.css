@@ -52,17 +52,22 @@ h2 {
 }
 
 a {
-    text-decoration: none;
     color: var(--text);
-    transition: color 0.2s;
-}
-
-a:hover {
     text-decoration: underline;
+    text-decoration-color: var(--link-line);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.18em;
+    text-decoration-skip-ink: auto;
+    transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 a:hover {
     color: var(--text);
+    text-decoration-color: var(--text);
+}
+
+.wrap > p a {
+    font-weight: 500;
 }
 
 /* =========================
@@ -162,6 +167,7 @@ a:hover {
     color: var(--muted);
     letter-spacing: -0.02em;
     padding: 8px;
+    text-decoration: none;
     transition: color 0.2s, opacity 0.2s;
 }
 
@@ -234,6 +240,24 @@ a:hover {
 /* =========================
    Cases index
    ========================= */
+
+.project-meta__item--status {
+    grid-template-columns: 1fr;
+}
+
+.project-meta__item--lang {
+    grid-template-columns: 1fr;
+}
+
+.project-meta__item--lang dd {
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-cv {
+    display: inline-block;
+    font-weight: 500;
+}
 
 .project-meta__item--back {
     grid-template-columns: 1fr;
