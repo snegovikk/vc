@@ -4,10 +4,15 @@
    Base
    ========================= */
 
+html {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
 body {
     margin: 0;
-    background: var(--bg);
-    color: var(--text);
+    background: transparent;
+    color: inherit;
     font-family: var(--font-family);
     font-size: 20px;
     font-weight: 500;
