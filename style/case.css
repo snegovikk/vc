@@ -67,7 +67,31 @@ a:hover {
 }
 
 .wrap > p a {
-    font-weight: 500;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.wrap > p a:hover {
+    text-decoration: none;
+    opacity: 0.65;
+}
+
+.intro-grid a {
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.intro-grid a:hover {
+    text-decoration: none;
+    opacity: 0.65;
+}
+
+.project-meta a {
+    text-decoration: none;
+}
+
+.project-meta a:hover {
+    text-decoration: none;
 }
 
 /* =========================
@@ -251,13 +275,10 @@ a:hover {
 
 .project-meta__item--links dd.project-meta__links {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.project-meta__cv-link {
-    font-weight: 500;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
 }
 
 .project-meta__item--lang {
