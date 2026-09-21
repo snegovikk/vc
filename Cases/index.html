@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f9f9f9">
-    <link rel="stylesheet" href="../style/fonts.css?v=20260921c">
-    <link rel="stylesheet" href="../style/darkmode.css?v=20260921c">
-    <link rel="stylesheet" href="../style/case.css?v=20260921c">
+    <link rel="stylesheet" href="../style/fonts.css?v=20260921d">
+    <link rel="stylesheet" href="../style/darkmode.css?v=20260921d">
+    <link rel="stylesheet" href="../style/case.css?v=20260921d">
     <script src="../scripts/theme.js"></script>
     <link rel="icon" href="../favicon/favicon.ico" sizes="any">
     <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
@@ -32,35 +32,30 @@
 
 <main>
     <section class="project-meta">
-        <dl class="project-meta__grid project-meta__grid--with-back">
-            <div class="project-meta__item project-meta__item--back">
-                <dd>
-                    <a href="../index.html" class="project-meta__back" id="back-link" aria-label="Назад" data-i18n-aria="back">←</a>
-                </dd>
-            </div>
-
-            <div class="project-meta__item">
-                <dt data-i18n="contacts">Контакты</dt>
-                <dd>
-                    <span data-i18n="tel_prefix">тел.</span> <a href="tel:+79254566390">+7 (925) 456–63–90</a><br>
-                    @: <a href="mailto:vikevstifeev@yandex.ru">vikevstifeev@yandex.ru</a><br>
-                    <span data-i18n="tg_prefix">тг:</span> <a href="https://t.me/EvstifeevVik" target="_blank" rel="noopener noreferrer">t.me/EvstifeevVik</a>
-                </dd>
-            </div>
-
-            <div class="project-meta__item project-meta__item--status">
-                <dt class="project-meta__label-spacer" aria-hidden="true"></dt>
-                <dd data-i18n="currently_at">Сейчас свободен</dd>
-            </div>
-
-            <div class="project-meta__item project-meta__item--links">
-                <dt data-i18n="links">Ссылки</dt>
-                <dd class="project-meta__links">
-                    <a href="../cv.html" class="project-meta__cv-link" data-i18n="cv_link">резюме</a>
+        <div class="meta-bar-row">
+            <a href="../index.html" class="meta-bar__back" id="back-link" aria-label="Назад" data-i18n-aria="back">←</a>
+            <nav class="meta-bar" aria-label="Контакты и навигация">
+                <div class="meta-bar__block">
+                    <p class="meta-bar__muted" data-i18n="designer">Дизайнер</p>
+                    <p><a href="https://t.me/EvstifeevVik" data-i18n="name">Евстифеев Виктор</a></p>
+                    <p><a href="https://t.me/faraferrari" target="_blank" rel="noopener">@faraferrari</a></p>
+                </div>
+                <div class="meta-bar__block">
+                    <p><a href="tel:+79254566390">+7 (925) 456–63–90</a></p>
+                    <p><a href="mailto:vikevstifeev@yandex.ru">vikevstifeev@yandex.ru</a></p>
+                    <p><a href="https://t.me/EvstifeevVik" target="_blank" rel="noopener noreferrer">t.me/EvstifeevVik</a></p>
+                </div>
+                <div class="meta-bar__block">
+                    <p class="meta-bar__muted" data-i18n="currently_at">Сейчас свободен</p>
+                </div>
+                <div class="meta-bar__block">
+                    <p><a href="../cv.html" data-i18n="cv_link">Резюме</a></p>
+                </div>
+                <div class="meta-bar__block meta-bar__block--lang">
                     <span data-language-switcher-host></span>
-                </dd>
-            </div>
-        </dl>
+                </div>
+            </nav>
+        </div>
     </section>
 
     <p class="cases-notice" data-i18n="cases_notice">Сейчас ведутся работы по формированию кейсов. Всё будет — но скоро…</p>

@@ -88,15 +88,6 @@ p.hero-lead a:hover {
     opacity: 0.65;
 }
 
-.project-meta a {
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.project-meta a:hover {
-    text-decoration: none;
-}
-
 /* =========================
    Media
    ========================= */
@@ -129,7 +120,7 @@ p.hero-lead a:hover {
 }
 
 /* =========================
-   Project meta
+   Header meta bar (5 blocks)
    ========================= */
 
 .project-meta {
@@ -138,57 +129,68 @@ p.hero-lead a:hover {
     padding: 32px clamp(16px, 4vw, 48px) 0;
 }
 
-.project-meta__grid {
+.meta-bar-row {
     display: flex;
+    align-items: flex-start;
+    gap: 64px;
+    margin: 0 0 80px;
+}
+
+.meta-bar {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 100%;
+    gap: 64px;
     margin: 0 0 80px;
-    gap: 56px;
+    padding: 0;
 }
 
-.project-meta__grid--with-back {
-    gap: 56px;
+.meta-bar-row .meta-bar {
+    margin-bottom: 0;
 }
 
-.project-meta__item {
-    display: grid;
-    grid-template-columns: auto minmax(0, max-content);
-    column-gap: 16px;
+.meta-bar__block {
     flex: 0 0 auto;
-    min-width: 0;
-    max-width: 100%;
     font-size: 16px;
     line-height: 24px;
-}
-
-.project-meta dt {
-    color: var(--muted);
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-    min-width: 5.75rem;
-}
-
-.project-meta__label-spacer {
-    min-width: 5.75rem;
-}
-
-.project-meta dd {
-    margin: 0;
-    color: var(--text);
     font-weight: 400;
-    min-width: 0;
-    overflow-wrap: anywhere;
 }
 
-.project-meta__item--status dd {
+.meta-bar__block p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: var(--text);
+}
+
+.meta-bar__muted {
     color: var(--muted);
 }
 
-.project-meta__item--right {
-    justify-self: end;
-    text-align: right;
+.meta-bar__block a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.meta-bar__block a:hover {
+    text-decoration: none;
+    opacity: 0.65;
+}
+
+.meta-bar__back {
+    flex: 0 0 auto;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.meta-bar__back:hover {
+    opacity: 0.6;
+    text-decoration: none;
 }
 
 /* =========================
@@ -284,54 +286,9 @@ p.hero-lead a:hover {
    Cases index
    ========================= */
 
-.project-meta__placeholder {
-    margin: 0;
-    padding: 0;
-    min-height: 0;
-}
-
-.project-meta__item--links dd.project-meta__links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
-}
-
-.project-meta__item--lang {
-    grid-template-columns: 1fr;
-}
-
-.project-meta__item--lang dd {
-    display: flex;
-    align-items: flex-start;
-}
-
 .timeline-cv {
     display: inline-block;
     font-weight: inherit;
-}
-
-.project-meta__item--back {
-    grid-template-columns: 1fr;
-    align-self: start;
-}
-
-.project-meta__item--back dd {
-    margin: 0;
-}
-
-.project-meta__back {
-    display: inline-block;
-    font-size: 24px;
-    line-height: 1;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.project-meta__back:hover {
-    opacity: 0.6;
-    text-decoration: none;
 }
 
 .wrap.wrap--cases {
@@ -416,9 +373,9 @@ p.hero-lead a:hover {
    ========================= */
 
 @media (max-width: 1100px) {
-    .project-meta__grid,
-    .project-meta__grid--with-back {
-        gap: 40px 48px;
+    .meta-bar,
+    .meta-bar-row {
+        gap: 48px;
     }
 }
 
@@ -447,26 +404,15 @@ p.hero-lead a:hover {
         padding: 24px 16px 0;
     }
 
-    .project-meta__grid,
-    .project-meta__grid--with-back {
+    .meta-bar {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .meta-bar-row {
         flex-direction: column;
         gap: 24px;
         margin-bottom: 48px;
-    }
-
-    .project-meta__item {
-        width: 100%;
-        grid-template-columns: auto minmax(0, 1fr);
-        column-gap: 16px;
-        row-gap: 4px;
-    }
-
-    .project-meta dt {
-        font-size: 16px;
-    }
-
-    .project-meta dd {
-        font-size: 16px;
     }
 
     #small-video {
