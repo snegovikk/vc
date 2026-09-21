@@ -2,6 +2,15 @@ html {
     color-scheme: light dark;
 }
 
+:root {
+    --bg: #f9f9f9;
+    --text: #000000;
+    --muted: #aaa;
+    --border: #f6f6f6;
+    --case-bg: #f0f0f0;
+    --link-line: rgba(0, 0, 0, 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #111111;

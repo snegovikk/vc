@@ -1,14 +1,6 @@
 @import url('fonts.css');
 @import url('darkmode.css');
 
-:root {
-    --bg: #f9f9f9;
-    --text: #000000;
-    --muted: #aaa;
-    --border: #f6f6f6;
-    --case-bg: #f0f0f0;
-}
-
 /* =========================
    Base
    ========================= */
