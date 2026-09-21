@@ -143,17 +143,19 @@ p.hero-lead a:hover {
     align-items: start;
     width: 100%;
     margin: 0 0 80px;
-    gap: clamp(16px, 2vw, 32px);
+    column-gap: 40px;
+    row-gap: 24px;
 }
 
 .project-meta__grid--with-back {
     grid-template-columns: 40px repeat(3, minmax(0, 1fr));
+    column-gap: 40px;
 }
 
 .project-meta__item {
     display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 16px;
+    grid-template-columns: 11ch minmax(0, 1fr);
+    column-gap: 20px;
     min-width: 0;
     font-size: 16px;
     line-height: 24px;
@@ -162,6 +164,8 @@ p.hero-lead a:hover {
 .project-meta dt {
     color: var(--muted);
     white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 .project-meta dd {
@@ -403,10 +407,13 @@ p.hero-lead a:hover {
 @media (max-width: 1100px) {
     .project-meta__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 32px;
+        row-gap: 24px;
     }
 
     .project-meta__grid--with-back {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 40px minmax(0, 1fr);
+        column-gap: 32px;
     }
 
     .project-meta__grid--with-back .project-meta__item--back {
@@ -456,7 +463,8 @@ p.hero-lead a:hover {
 
     .project-meta__item {
         width: 100%;
-        grid-template-columns: 1fr;
+        grid-template-columns: 11ch minmax(0, 1fr);
+        column-gap: 16px;
         row-gap: 4px;
     }
 
