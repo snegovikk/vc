@@ -112,20 +112,22 @@ a:hover {
 }
 
 .project-meta__grid {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
     width: 100%;
     margin: 0 0 80px;
     gap: clamp(16px, 2vw, 32px);
+}
+
+.project-meta__grid--with-back {
+    grid-template-columns: 40px repeat(3, minmax(0, 1fr));
 }
 
 .project-meta__item {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 16px;
-    flex: 1 1 0;
     min-width: 0;
     font-size: 16px;
     line-height: 24px;
@@ -241,8 +243,21 @@ a:hover {
    Cases index
    ========================= */
 
-.project-meta__item--status {
-    grid-template-columns: 1fr;
+.project-meta__placeholder {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+}
+
+.project-meta__item--links dd.project-meta__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.project-meta__cv-link {
+    font-weight: 500;
 }
 
 .project-meta__item--lang {
@@ -261,6 +276,7 @@ a:hover {
 
 .project-meta__item--back {
     grid-template-columns: 1fr;
+    align-self: start;
 }
 
 .project-meta__item--back dd {
@@ -363,11 +379,19 @@ a:hover {
 
 @media (max-width: 1100px) {
     .project-meta__grid {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .project-meta__item {
-        flex: 1 1 calc(50% - 16px);
+    .project-meta__grid--with-back {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .project-meta__grid--with-back .project-meta__item--back {
+        grid-row: span 1;
+    }
+
+    .project-meta__grid--with-back .project-meta__item:nth-child(2) {
+        grid-column: 2;
     }
 }
 
@@ -396,18 +420,25 @@ a:hover {
         padding: 24px 16px 0;
     }
 
-    .project-meta__grid {
-        flex-direction: column;
-        flex-wrap: nowrap;
+    .project-meta__grid,
+    .project-meta__grid--with-back {
+        grid-template-columns: 1fr;
         gap: 16px;
         margin-bottom: 48px;
     }
 
+    .project-meta__grid--with-back .project-meta__item:nth-child(2) {
+        grid-column: auto;
+    }
+
     .project-meta__item {
-        flex: 1 1 auto;
         width: 100%;
         grid-template-columns: 1fr;
         row-gap: 4px;
+    }
+
+    .project-meta__placeholder {
+        display: none;
     }
 
     .project-meta dt {

@@ -273,8 +273,9 @@
         gap: 12px;
       }
       .language-switcher--inline {
-        display: flex;
+        display: inline-flex;
         gap: 10px;
+        align-items: center;
       }
       .language-switcher--fixed {
         position: fixed;
@@ -344,13 +345,11 @@
     });
 
     const host = document.querySelector('[data-language-switcher-host]');
-    if (host) {
-      switcher.classList.add('language-switcher--inline');
-      host.appendChild(switcher);
-    } else {
-      switcher.classList.add('language-switcher--fixed');
-      document.body.appendChild(switcher);
+    if (!host) {
+      return;
     }
+    switcher.classList.add('language-switcher--inline');
+    host.appendChild(switcher);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
