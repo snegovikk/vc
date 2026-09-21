@@ -18,12 +18,16 @@
     },
     habr: { ru: 'Хабр', en: 'Habr' },
     back: { ru: 'Назад', en: 'Back' },
-    intro_before_atom: {
-      ru: 'Дизайнер цифровых продуктов. Сейчас работаю над электромобилем в',
-      en: 'Digital product designer. Currently designing an EV at'
+    intro_lead: {
+      ru: 'Дизайнер цифровых продуктов.',
+      en: 'Digital product designer.'
+    },
+    intro_atom_phrase: {
+      ru: 'Работал над электромобилем в',
+      en: 'Worked on an electric vehicle at'
     },
     intro_mid: { ru: 'Развиваю', en: 'Building' },
-    intro_after: { ru: 'Работал над', en: 'Previously at' },
+    intro_after: { ru: 'Работал над', en: 'Worked on' },
     mts_auto: { ru: 'МТС Авто', en: 'MTS Auto' },
     role_atom: { ru: 'Дизайн-лид, ATOM', en: 'Design Lead, ATOM' },
     role_mts: {
